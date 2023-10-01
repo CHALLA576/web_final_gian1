@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Roboto+Condensed:ital,wght@1,700&family=Tilt+Prism&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile First */
+
+.img {
+    display: inline-block; /* Changed to inline-block */
+    width: 80%; /* Adjusted for mobile responsiveness */
+    max-width: 360px; /* The maximum width it can grow to on larger devices */
+    height: auto; /* Maintains aspect ratio */
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 40px;
+    transition: all 0.5s ease-out;
+    position: relative; /* For positioning pseudo-elements */
+    overflow: hidden; /* Keeps pseudo-element contained within the img */
+}
+
+.img:before { /* Pseudo-element for gradient overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0); /* Initially transparent */
+    transition: background 0.5s ease-out;
+    z-index: 1; /* Ensure it stays on top */
+}
+
+.img:hover {
+    transform: scale(1.1) rotate(4deg); /* Grow and rotate */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+}
+
+.img:hover:before {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay on hover */
+}
+
+/* For tablets and larger devices */
+@media (min-width: 320px) {
+    #main {
+        width: 100%;
+
+    }
+    .img{
+        width: 49%;
+        height: 100%;
+        display: inline-block;
+        margin: 1px;
+    }
+}
+
+#scrollimges{
+    background-image: url(./wallpapersden.com_tree-alone-dark-evening-4k_3840x2160.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

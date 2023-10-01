@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  min-height: 30vh;
+  background-image: url(./wallpapersden.com_tree-alone-dark-evening-4k_3840x2160.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 9px 9px 18px #d0d0d0, -9px -9px 18px #ffffff;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  box-shadow: 12px 12px 24px #c0c0c0, -12px -12px 24px #ffffff;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .image {
+  filter: brightness(1.05);
+}
+
+.tapSign {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover .tapSign {
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.details {
+  opacity: 0;
+  max-height: 0;
+  padding: 15px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.card:hover .details {
+  opacity: 1;
+  max-height: 300px;
+  color: green;
+}
+
+.card:hover .tapSign {
+  opacity: 0;
+}
