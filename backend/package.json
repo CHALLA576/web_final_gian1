@@ -25,6 +25,7 @@
     "eject": "react-scripts eject",
     "build": "npm i",
     "dev": "nodemon index.js"
+
   },
   "eslintConfig": {
     "extends": [
