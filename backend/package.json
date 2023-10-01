@@ -20,15 +20,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-        "server": "node server/server.js",
-        "start": "react-scripts start",
-        "serve": "start /B npm run server & npm run start",
-        "startboth": "concurrently \"npm start\" \"npm run server\"",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build": "npm i",
+    "dev": "nodemon index.js"
 
   },
   "eslintConfig": {
